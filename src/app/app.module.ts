@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
@@ -42,12 +43,14 @@ import { LoginComponent } from './login/login.component';
       { path: '', component: HomeComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
+      { path: 'my-orders', component: MyOrdersComponent },
       { path: 'checkout', component: CheckoutComponent },
       { path: 'order-success', component: OrderSuccessComponent },
       { path: 'login', component: LoginComponent },
       { path: 'admin/products', component: AdminProductsComponent },
       { path: 'admin/orders', component: AdminOrdersComponent },
     ]),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
